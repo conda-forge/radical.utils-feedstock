@@ -29,7 +29,7 @@ requirements:
     - setproctitle
     - regex
     - pyzmq 
-    - msgpack
+    - msgpack-python
     - pymongo
     
 test:
