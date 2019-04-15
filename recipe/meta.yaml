@@ -27,6 +27,10 @@ requirements:
     - colorama
     - netifaces
     - setproctitle
+    - regex
+    - pyzmq 
+    - msgpack-python
+    - pymongo
     
 test:
   imports:
