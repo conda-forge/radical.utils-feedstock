@@ -1,6 +1,6 @@
 {% set name = "radical.utils" %}
-{% set version = "0.50.3" %}
-{% set sha256 = "346137164b401174895881ff2befa89da18bf7c76e429ed13a0f74e8472b9847" %}
+{% set version = "0.60.1" %}
+{% set sha256 = "a1f7dea32646a9052258ed2ae95696731dfe22d5caec0328750475b76728af26" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   skip: True  # [py3k or win]
 
@@ -27,6 +27,10 @@ requirements:
     - colorama
     - netifaces
     - setproctitle
+    - regex
+    - pyzmq 
+    - msgpack-python
+    - pymongo
     
 test:
   imports:
