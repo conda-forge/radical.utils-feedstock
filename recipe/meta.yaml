@@ -1,6 +1,6 @@
 {% set name = "radical.utils" %}
-{% set version = "1.1.1" %}
-{% set sha256 = "f8f489f5d53f556745913d6ca94dc410b831bbfe3ec1866c0b9a0a9a3d02735c" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "54eb5a9f1330af8718449722508e7bbc592c5f04268550aff201cab610caa7d0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
-  skip: True  # [py2k or win]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: true  # [py2k or win]
 
 
 requirements:
@@ -29,22 +29,22 @@ requirements:
     - netifaces
     - setproctitle
     - regex
-    - pyzmq 
+    - pyzmq
     - msgpack-python
     - pymongo
     - munch
     - wheel
-    
+
 test:
   imports:
     - radical.utils
-  
+
 about:
   home: https://github.com/radical-cybertools/radical.utils
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Shared code and tools for various RADICAL Projects (http://radical.rutgers.edu/)'
+  summary: Shared code and tools for various RADICAL Projects (http://radical.rutgers.edu/)
   description: |
     This Python package contains shared code and tools for various Radical Group projects.
   dev_url: https://github.com/radical-cybertools/radical.utils
