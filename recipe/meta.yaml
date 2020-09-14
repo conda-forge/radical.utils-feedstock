@@ -1,6 +1,6 @@
 {% set name = "radical.utils" %}
-{% set version = "1.5.3" %}
-{% set sha256 = "b87bb764822d9ee5dc363a3e07320c1e42eb5c3a22e93e034e33f8dd3cae0f39" %}
+{% set version = "1.5.4" %}
+{% set sha256 = "a3c77fac21f13ef5b8e852610ca8b7068e06265f626916e41d77d869116c1af1" %}
 
 package:
   name: {{ name|lower }}
