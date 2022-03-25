@@ -11,29 +11,24 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   skip: true  # [py2k or win]
 
-
 requirements:
-  build:
-    - {{ compiler('c') }}
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - future
+    - python >=3.6
     - colorama
-    - netifaces
-    - setproctitle
-    - regex
-    - pyzmq
     - msgpack-python
-    - pymongo
-    - munch
-    - wheel
+    - netifaces
+    - ntplib
+    - pymongo <4
+    - pyzmq
+    - regex
+    - setproctitle
 
 test:
   imports:
@@ -44,12 +39,12 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: Shared code and tools for various RADICAL Projects (http://radical.rutgers.edu/)
+  summary: Shared code and tools for various RADICAL-Cybertools projects
   description: |
-    This Python package contains shared code and tools for various Radical Group projects.
+    This Python package contains shared code and tools for various RADICAL-Cybertools projects.
   dev_url: https://github.com/radical-cybertools/radical.utils
 
 extra:
   recipe-maintainers:
     - andre-merzky
-    - lee212
+    - mtitov
