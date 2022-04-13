@@ -1,6 +1,6 @@
 {% set name = "radical.utils" %}
-{% set version = "1.13.0" %}
-{% set sha256 = "84c1cad8be988dad7fb2b8455d19a4fb0c979fab02c5b7a7b531a4ae8fe52580" %}
+{% set version = "1.14.0" %}
+{% set sha256 = "f61f0e335bbdc51e4023458e7e6959551686ebf170adc5353220dcc83fd677c9" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   skip: true  # [py2k or py>39 or win]
 
