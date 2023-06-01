@@ -29,7 +29,7 @@ requirements:
     - pyzmq
     - regex
     - setproctitle
-    - radical-gtod
+    - radical.gtod
 
 test:
   imports:
