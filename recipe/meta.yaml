@@ -1,6 +1,6 @@
 {% set name = "radical.utils" %}
-{% set version = "1.33.0" %}
-{% set sha256 = "1a46b4b523154c0b59d6e65c2c482fc2ca4a4fa87a3527b32691693540f06e7a" %}
+{% set version = "1.41.0" %}
+{% set sha256 = "a7022dcbb78a65402ecda6af297e1e6a1bb1865bb07b2e204d0993b50742f170" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,6 @@ requirements:
     - msgpack-python
     - netifaces
     - ntplib
-    - pymongo <4
     - pyzmq
     - regex
     - setproctitle
