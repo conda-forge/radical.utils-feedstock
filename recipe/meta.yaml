@@ -12,7 +12,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
+  # You NEED to include the platform in the build string to avoid hash collisions
+  string: linux_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [linux]
+  string: osx_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [osx]
+  string: win_pyh{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [win]
 
 requirements:
   host:
@@ -28,6 +32,11 @@ requirements:
     - pyzmq
     - regex
     - setproctitle
+
+    # Keep the package noarch
+    - __linux  # [linux]
+    - __osx    # [osx]
+    - __win    # [win]
 
 test:
   imports:
