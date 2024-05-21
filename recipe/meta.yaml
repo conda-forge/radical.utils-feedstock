@@ -1,26 +1,26 @@
 {% set name = "radical.utils" %}
-{% set version = "1.48.0" %}
-{% set sha256 = "7cf0e25226f9f087cc3d32a4215e353231ada82b0ae86aa874063cdc94833c98" %}
+{% set version = "1.52.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radical_utils-{{ version }}.tar.gz
+  sha256: 6ea6769a44fef77d623d9545f2efecdd696ad7740f0bea8d354e396088d6ff84
 
 build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  skip: true  # [py2k or win]
 
 requirements:
   host:
-    - python
+    - python >=3.8
+    - setuptools
     - pip
   run:
-    - python
+    - python >=3.8
     - colorama
     - msgpack-python
     - netifaces
@@ -38,7 +38,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/radical-cybertools/radical.utils
+  home: http://radical-cybertools.github.io/radical.utils/
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
@@ -51,3 +51,4 @@ extra:
   recipe-maintainers:
     - andre-merzky
     - mtitov
+    - xylar
