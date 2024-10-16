@@ -1,5 +1,5 @@
 {% set name = "radical.utils" %}
-{% set version = "1.82.0" %}
+{% set version = "1.83.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radical_utils-{{ version }}.tar.gz
-  sha256: 747d6e866ebe4363d62065155c3c8d96dc42557719cf2edc040a1f7e85dec1d0
+  sha256: 135904ea844310ce116c143f40abb91b7bd0b1310ae44fbf48545354c0acdcec
 
 build:
   noarch: python
