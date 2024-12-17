@@ -39,7 +39,7 @@ test:
     - pip
 
 about:
-  home: http://radical-cybertools.github.io/radical.utils/
+  home: hhttps://radical-cybertools.github.io/
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
@@ -47,6 +47,7 @@ about:
   description: |
     This Python package contains shared code and tools for various RADICAL-Cybertools projects.
   dev_url: https://github.com/radical-cybertools/radical.utils
+  doc_url: https://radicalutils.readthedocs.io/en/stable/
 
 extra:
   recipe-maintainers:
