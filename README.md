@@ -3,13 +3,15 @@ About radical.utils-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/radical.utils-feedstock/blob/main/LICENSE.txt)
 
-Home: http://radical-cybertools.github.io/radical.utils/
+Home: hhttps://radical-cybertools.github.io/
 
 Package license: MIT
 
 Summary: Shared code and tools for various RADICAL-Cybertools projects
 
 Development: https://github.com/radical-cybertools/radical.utils
+
+Documentation: https://radicalutils.readthedocs.io/en/stable/
 
 This Python package contains shared code and tools for various RADICAL-Cybertools projects.
 
