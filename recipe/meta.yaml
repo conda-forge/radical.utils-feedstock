@@ -1,5 +1,5 @@
 {% set name = "radical.utils" %}
-{% set version = "1.102.0" %}
+{% set version = "1.103.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/radical_utils-{{ version }}.tar.gz
-  sha256: 9fcb8feb23d357631517cc9aa01a2df00fca9d7961d342de5c1d597367fbba55
+  sha256: 2358035b23ff41825c500076b739ca96ecf55046a19a178a57bf0d26f49cb3cf
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - rc.process
     - python >={{ python_min }}
     - colorama
     - msgpack-python
