@@ -20,7 +20,6 @@ requirements:
     - setuptools
     - pip
   run:
-    - rc.process
     - python >={{ python_min }}
     - colorama
     - msgpack-python
@@ -29,6 +28,7 @@ requirements:
     - pyzmq
     - regex
     - setproctitle
+    - rc.process
 
 test:
   imports:
